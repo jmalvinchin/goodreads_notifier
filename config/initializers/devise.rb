@@ -248,7 +248,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  # config.omniauth :goodreads, 'BqFVa5DLqqr1mTp56FZxA', 'yQWvhs5v95eh9zVdANRsQG0O29qinoYKP2g5ajvg4', ENV["gr_callback_url"]
+  config.omniauth :goodreads, 'BqFVa5DLqqr1mTp56FZxA', 'yQWvhs5v95eh9zVdANRsQG0O29qinoYKP2g5ajvg4'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
