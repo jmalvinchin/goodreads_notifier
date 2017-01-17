@@ -11,6 +11,7 @@ class User < ApplicationRecord
       user.name = auth.info.name
       user.image = auth.info.image
       user.access_token = auth.credentials.token
+      user.token_secret = auth.credentials.secret
     end
   end
 
