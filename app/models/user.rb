@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:goodreads]
+  has_many :books
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -11,6 +12,7 @@ class User < ApplicationRecord
       user.name = auth.info.name
       user.image = auth.info.image
       user.access_token = auth.credentials.token
+      user.token_secret = auth.credentials.secret
     end
   end
 
