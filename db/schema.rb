@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116221256) do
+ActiveRecord::Schema.define(version: 20170121012531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "goodreads_link"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "image_url"
+    t.string   "small_image_url"
+    t.string   "large_image_url"
+    t.string   "goodreads_link"
+    t.datetime "publication_date"
+    t.float    "average_rating"
+    t.text     "description"
+    t.integer  "author_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["author_id"], name: "index_books_on_author_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: ""
