@@ -16,12 +16,13 @@ var Books = React.createClass({
             <tr>
               <th>Title</th>
               <th>Description</th>
+              <th />
             </tr>
           </thead>
           <tbody>
             {this.state.books.map(function(book) {
               return <Book key={book.id} book={book}/>
-            }.bind(this))}
+            })}
            </tbody>
         </table>
       </div>
