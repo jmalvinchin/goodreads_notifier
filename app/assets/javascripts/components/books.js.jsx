@@ -15,8 +15,8 @@ var Books = React.createClass({
           <thead>
             <tr>
               <th>Title</th>
-              <th>Description</th>
-              <th />
+              <th>Publication Date</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>

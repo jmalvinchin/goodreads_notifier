@@ -5,8 +5,9 @@ var BookAlert = React.createClass({
   },
 
   render: function() {
-    return (
-      <button onClick={this.handleClick}>Alert</button>
-    )
+    if (this.props.isPublished) {
+      return <div>Released</div>
+    }
+    return <button onClick={this.handleClick}>Alert</button>
   }
 });
