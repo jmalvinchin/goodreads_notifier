@@ -54,6 +54,7 @@ GEM
       execjs (~> 2.0)
     bcrypt (3.1.11)
     builder (3.2.3)
+    bulma (0.1.0)
     byebug (9.0.6)
     coderay (1.1.1)
     coffee-rails (4.2.1)
@@ -268,6 +269,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bulma
   byebug
   coffee-rails (~> 4.2)
   devise
