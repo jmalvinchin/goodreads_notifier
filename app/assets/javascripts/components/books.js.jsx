@@ -9,8 +9,14 @@ var Books = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <h1>Books</h1>
+      <div className="container is-fluid">
+        <nav className="nav">
+          <div className="nav-left">
+            <a className="nav-item">
+              Goodreads Notifier
+            </a>
+          </div>
+        </nav>
         <table className="table table-bordered">
           <thead>
             <tr>
